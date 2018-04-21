@@ -67,7 +67,7 @@ def get_password_strength(password, black_listed_words):
     return current_score + sum(evaluations)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         blacklisted_words = read_file("blacklist.txt")
     except FileNotFoundError:
