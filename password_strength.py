@@ -1,10 +1,9 @@
-import sys
 import re
 import getpass
 
 
 def get_password_from_user():
-    return getpass.getpass('Enter a password (minimum length 6 is required): ')
+    return getpass.getpass("Enter a password (minimum length 6 is required): ")
 
 
 def read_file(filename):
