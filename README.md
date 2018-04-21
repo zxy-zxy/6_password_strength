@@ -14,7 +14,7 @@ Python >= 3.5 required.
 
 To run script open shell and run password_strength.py. 
 
-You should keep **blacklist.txt**_ in same directory with python file to be able to
+You should keep **blacklist.txt** in same directory with python file to be able to
 run check for a match with blacklisted words.
 ```bash
 python password_strength.py
