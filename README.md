@@ -13,12 +13,13 @@ Password evaluation requirements:
 Python >= 3.5 required.
 
 To run script open shell and run **password_strength.py** 
-
-**Note**: _You should keep **blacklist.txt** in same directory with python file to be able to run check for a match with blacklisted words. Current blacklist is obtained from: https://github.com/danielmiessler/SecLists/tree/master/Passwords
-You can update it regularly by yourself._
 ```bash
 python password_strength.py
 ```
+
+**Note**: _You should keep **blacklist.txt** in same directory with python file to be able to run check for a match with blacklisted words. Current blacklist is obtained from: https://github.com/danielmiessler/SecLists/tree/master/Passwords
+You can update it regularly by yourself._
+
 ### Example input & output
 ```bash 
 Enter a password (minimum length 6 is required): 
