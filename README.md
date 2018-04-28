@@ -6,16 +6,16 @@ Password evaluation requirements:
 1. Length more than 10 symbols.
 2. Use numbers.
 3. Use lowercase and uppercase letters.
-4. Use special characters such as **&!#**.
+4. Use special characters such as **!@#$%^&\*())**.
 5. Avoid to use blacklisted words.
 
 ## Usage
 Python >= 3.5 required.
 
-To run script open shell and run password_strength.py. 
+To run script open shell and run **password_strength.py** 
 
-You should keep **blacklist.txt** in same directory with python file to be able to
-run check for a match with blacklisted words.
+**Note**: _You should keep **blacklist.txt** in same directory with python file to be able to run check for a match with blacklisted words. Current blacklist is obtained from: https://github.com/danielmiessler/SecLists/tree/master/Passwords
+You can update it regularly by yourself._
 ```bash
 python password_strength.py
 ```
