@@ -9,7 +9,7 @@ def get_password_from_user(minimum_password_length):
     )
 
 
-def read_file(filename):
+def load_blacklisted_words(filename):
     with open(filename) as file:
         return file.read().splitlines()
 
@@ -21,11 +21,7 @@ def character_is_present(case, password):
 
 
 def has_blacklisted_words(password, blacklisted_words):
-    if blacklisted_words is None:
-        return 0
-    if password in blacklisted_words:
-        return 0
-    return 1
+    return password not in blacklisted_words
 
 
 def has_special_character(password):
@@ -47,11 +43,11 @@ def has_lower_and_upper_case(password):
 
 def has_digit(password):
     digit_is_present = character_is_present(str.isdigit, password)
-    return 2 if digit_is_present else 0
+    return digit_is_present * 2
 
 
 def has_required_length(password):
-    return 1 if len(password) > 10 else 0
+    return len(password) > 10
 
 
 def get_password_strength(password, black_listed_words, minimum_password_length):
@@ -75,9 +71,9 @@ if __name__ == '__main__':
     minimum_password_length = 6
 
     try:
-        blacklisted_words = read_file('blacklist.txt')
+        blacklisted_words = load_blacklisted_words('blacklist.txt')
     except FileNotFoundError:
-        blacklisted_words = None
+        blacklisted_words = []
         print('Cannot open file with blacklisted words. Checking for blacklisted words will be skipped.')
 
     password_to_evaluate = get_password_from_user(minimum_password_length)
